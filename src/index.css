@@ -1,0 +1,15 @@
+body {
+  background-color: #f8f9fa; /* Light grey */
+  font-family: 'Inter', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Change active dropdown item color */
+.dropdown-item:active,
+.dropdown-item.active {
+  background-color: #6c757d !important; /* secondary color */
+  color: white !important;
+}
