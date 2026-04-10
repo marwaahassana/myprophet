@@ -1,6 +1,7 @@
 import React from 'react';
 import i18n from 'i18next';
 import Mynavbar from './components/navbar';
+import Myfooter from './components/footer';
 import { Container, Row, Col, Card} from 'react-bootstrap';
 import { useTranslation, initReactI18next } from 'react-i18next';
 import { useEffect } from "react";
@@ -14,17 +15,21 @@ if (!i18n.isInitialized) {
           birth: "Birth",
           childhood: "Childhood",
           youth: "Youth",
-          death: "Passing",
+          passing: "Passing",
           button: "العربية",
-          name: "Prophet Muhammad (PBUH)",
-          title: "The Last Prophet",
-          bio: "Prophet Muhammad (PBUH) is the founder of Islam and is considered the last prophet in Islamic tradition.",
-          teachingsTitle: "Teachings:",
-          teachings: [
-            "Monotheism: The belief in one God (Allah) is central to Islam.",
-            "Compassion: Showing mercy and kindness to all living beings.",
-            "Justice: Treating everyone fairly and standing up for the oppressed."
-          ]
+          info:{
+            Name: "Muhammad ibn Abdullah, ibn Abdul-Muttalib",
+            Message: "The Islam",
+            Birth :"Born in the Year of the Elephant in Mecca",
+            Appellation: "Abu al-Qasim",
+            Mother: "Amina bint Wahb",
+            Passing: "The eleventh year of the Hijra"
+          },
+          resources: "Resources",
+          faq: "FAQ",
+          contact: "Contact",
+          cprt: "© 2026 Prophet Muhammad (PBUH). All rights reserved.",
+          design: "Designed by Marwa Hassan"
         }
       },
       ar: {
@@ -34,17 +39,21 @@ if (!i18n.isInitialized) {
           birth: "الميلاد",
           childhood: "الطفولة",
           youth: "الشباب",
-          death: "الوفاة",
+          passing: "الوفاة",
           button: "English",
-          name: "النبي محمد ﷺ",
-          title: "خاتم الأنبياء",
-          bio: "النبي محمد ﷺ هو مؤسس الإسلام ويعتبر آخر الأنبياء في العقيدة الإسلامية.",
-          teachingsTitle: "التعاليم:",
-          teachings: [
-            "التوحيد: الإيمان بإله واحد.",
-            "الرحمة: الرحمة واللطف مع جميع الكائنات.",
-            "العدل: معاملة الجميع بعدل."
-          ]
+          info:{
+            الإسم: "محمَّد بن عبد الله، بن عبد المطلب",
+            الرسالة: "الإسلام",
+            الولادة :"عام الفيل بمكة المكرمة",
+            الكنية: "أبو القاسم",
+            الأم: "آمنة بنت وهب", 
+            الوفاة:"السنة الحادية عشرة من الهجرة"
+          },
+          resources: "المصادر",
+          faq: "الأسئلة الشائعة",
+          contact: "اتصل بنا",
+          cprt: "© 2026 النبي محمد (صلى الله عليه وسلم). جميع الحقوق محفوظة.",
+          design: "تصميم مروه حسن"
         }
       }
     },
@@ -58,8 +67,7 @@ if (!i18n.isInitialized) {
 }
 
 function App(){
- const { t } = useTranslation();
- const { i18n } = useTranslation();
+const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const savedLang = localStorage.getItem("lang") || "en";
@@ -81,28 +89,23 @@ function App(){
                    alt="Profile"
                    className="rounded-circle border border-4 border-secondary shadow" />
                </div>
-               <h3 className="fw-bold">{t("name")}</h3>
-               <p className="text-secondary">{t("title")}</p>
              </Col>
-             {/* Content Section */}
+             {/* Information Section */}
              <Col md={8} className="p-4 bg-light">
-               <p className="text-muted mb-4">{t("bio")}</p>
-               <hr />
-               <h5 className="fw-bold mb-3">{t("teachingsTitle")}</h5>
-               {Array.isArray(t("teachings", { returnObjects: true })) &&
-               t("teachings", { returnObjects: true }).map((tchng, index) => (
-                 <div key={index} className="mb-3">
-                   <div className="d-flex justify-content-between mb-1">
-                     <span className="fw-bold">{tchng}</span>
-                   </div>
-                 </div>
-               ))}
+              <div>
+                {Object.entries(t("info", { returnObjects: true })).map(([key, value]) => (
+                <p key={key}>
+                {t(key)} : {value}
+                </p>
+             ))}
+              </div>
              </Col>
            </Row>
          </Card>
        </Col>
      </Row>
    </Container>
+   <Myfooter /> 
   </>
  );
 };
