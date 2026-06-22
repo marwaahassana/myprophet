@@ -13,3 +13,31 @@ img {
   background-color: #6c757d !important; /* secondary color */
   color: white !important;
 }
+
+.article-section {
+  max-width: 900px;
+}
+
+.article-card {
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.article-content {
+  padding: 0.5rem 0.25rem;
+}
+
+.article-text {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #2b2f36;
+  margin: 0;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .article-text {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+}

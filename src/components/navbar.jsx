@@ -21,7 +21,11 @@ return(
     <Navbar expand="lg" className="bg-body-secondary shadow">
       <Container>
         <Navbar.Brand href="index.html" className="fw-bold">
-          Prophet Muhammad (PBUH)  النبي محمد ﷺ
+            <img src="/images/logo.png" className="rounded-circle img-fluid" width="50" height="50" alt="Logo" />
+            <br />
+            النبي محمد ﷺ
+            <br />
+            Prophet Muhammad (PBUH)
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

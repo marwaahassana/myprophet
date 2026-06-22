@@ -23,13 +23,15 @@ return(
       
       <Nav className="justify-content-center mb-2">
         <Nav.Link href="resources.html">{t("resources")}</Nav.Link>
-        <Nav.Link href="faq.html">{t("faq")}</Nav.Link>
-        <Nav.Link href="contact.html">{t("contact")}</Nav.Link>
+        <Nav.Link href="sitemap.html">{t("sitemp")}</Nav.Link>
+        <Nav.Link href="about.html">{t("about")}</Nav.Link>
       </Nav>
 
       {/* Footer Text */}
       <p className="mb-0">{t("cprt")}</p>
       <p className="mb-0">{t("design")}</p>
+
+      <a href="https://www.flaticon.com/free-icons/muhammad" title="muhammad icons">Muhammad icons created by apien - Flaticon</a>
 
     </Container>
   </Navbar>
