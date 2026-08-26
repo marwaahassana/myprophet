@@ -16,16 +16,17 @@ const { t,i18n } = useTranslation();
     localStorage.setItem("lang", newLang);
     // RTL support
     document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+    document.documentElement.lang = newLang;
   };
 return(
-    <Navbar expand="lg" className="bg-body-secondary shadow">
+    <Navbar expand="lg"  sticky="top" className="site-navbar">
       <Container>
         <Navbar.Brand href="index.html" className="fw-bold">
-            <img src="/images/logo.png" className="rounded-circle img-fluid" width="50" height="50" alt="Logo" />
-            <br />
-            النبي محمد ﷺ
-            <br />
-            Prophet Muhammad (PBUH)
+            <small><img src="/images/logo.png" className="rounded-circle img-fluid" width="50" height="50" alt="Logo" /></small>
+      
+            <small className="text-muted">النبي محمد ﷺ</small>
+           
+            <small className="text-muted">Prophet Muhammad (PBUH)</small>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -43,11 +44,11 @@ return(
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <div style={{ textAlign: "center", marginTop: "20px" }}>
-           <Button variant="outline-secondary" onClick={toggleLanguage}>
+          
+           <Button  className="language-btn ms-lg-3" onClick={toggleLanguage}>
             {t("button")}
            </Button>
-          </div>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>

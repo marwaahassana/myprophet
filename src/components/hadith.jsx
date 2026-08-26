@@ -45,10 +45,13 @@ const [loading, setLoading] = useState(false);
 
 
 return(
-            <div>
+        <Container className="my-5">
               {/* Hadith Card */}
-              <Card className="shadow border-0 text-center p-4 mt-4 bg-light">
-                <h4 className="mb-3"> {t("hdth")} </h4>
+          <Card  className="hadith-card border-0">
+           <Card.Header className="hadith-header">
+            <h3 className="mb-0 text-center">{t("hdth")}</h3>
+           </Card.Header>
+           <Card.Body className="text-center">
                 {loading ? (
                 <Spinner animation="border" />
                 ) : hadith ? (
@@ -62,14 +65,12 @@ return(
                 ) : (
                 <p>{t("clckhdthbtn")}</p>
                 )}
-
-            <div style={{ textAlign: "center", marginTop: "20px" }}>
-                <Button variant="outline-secondary" onClick={getRandomHadith} className="mt-3">
+                <Button className="language-btn mt-4" onClick={getRandomHadith} className="mt-3">
                   {t("randomHadith")}
                 </Button>
-            </div>
-              </Card>
-            </div>
+              </Card.Body> 
+          </Card>
+        </Container>
 );
 };
 export default Myhadith;

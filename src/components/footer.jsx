@@ -1,9 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import { useTranslation } from 'react-i18next';
 
 function Myfooter(){
@@ -18,23 +15,19 @@ function Myfooter(){
     };
 return(
   <>
-  <Navbar expand="lg" className="bg-body-secondary shadow mt-5">
-    <Container className="flex-column text-center">
-      
-      <Nav className="justify-content-center mb-2">
+  <footer className="site-footer mt-5">
+    <Container className="text-center py-4">
+      <Nav className="justify-content-center mb-3">
         <Nav.Link href="resources.html">{t("resources")}</Nav.Link>
         <Nav.Link href="sitemap.html">{t("sitemp")}</Nav.Link>
         <Nav.Link href="about.html">{t("about")}</Nav.Link>
       </Nav>
 
       {/* Footer Text */}
-      <p className="mb-0">{t("cprt")}</p>
+      <p className="mb-1">{t("cprt")}</p>
       <p className="mb-0">{t("design")}</p>
-
-      <a href="https://www.flaticon.com/free-icons/muhammad" title="muhammad icons">Muhammad icons created by apien - Flaticon</a>
-
     </Container>
-  </Navbar>
+  </footer>
 </>
 
 );

@@ -99,7 +99,7 @@ const { i18n } = useTranslation();
    <Container className="py-5 ">
      <Row className="justify-content-center">
        <Col md={10} lg={8}> 
-         <Carousel className="py-5 ">
+         <Carousel className="py-5">
           <Carousel.Item>
           <a href="/iqraa.html">
           <img
@@ -108,8 +108,10 @@ const { i18n } = useTranslation();
            alt="Nuzul Al-Wahy illustration"
           /></a>
           <Carousel.Caption>
-           <h3>({t('nuzulalwahy')})</h3>
-           <p>{t('revelationDesc')}</p>
+           <div className="carousel-caption-overlay">
+            <h3>({t('nuzulalwahy')})</h3>
+            <p>{t('revelationDesc')}</p>
+           </div> 
           </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -120,8 +122,10 @@ const { i18n } = useTranslation();
            alt="al-isra wal-mi'raj illustration"
           /></a>
           <Carousel.Caption>
-           <h3>({t('alisra')})</h3>
-           <p>{t('alisraDesc')}</p>
+           <div className="carousel-caption-overlay">
+            <h3>({t('alisra')})</h3>
+            <p>{t('alisraDesc')}</p>
+           </div>
           </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -132,24 +136,26 @@ const { i18n } = useTranslation();
            alt="Hijra illustration"
           /></a>
           <Carousel.Caption>
-           <h3>({t('hijra')})</h3>
-           <p>{t('hijraDesc')}</p>
+           <div className="carousel-caption-overlay">
+            <h3>({t('hijra')})</h3>
+            <p>{t('hijraDesc')}</p>
+           </div>
           </Carousel.Caption>
           </Carousel.Item>
          </Carousel>
-         <Card className="shadow-lg border-0 overflow-hidden">
+         <Card className="article-card border-0 overflow-hidden">
            <Row className="g-0">
              {/* Image Section */}
              <Col md={4} className="bg-dark text-white text-center p-4">
                <div className="mb-3 mt-4">
                  <img
-                   src="/images/muhamad.png"
+                   src="/images/logo.png"
                    alt="Profile"
                    className="rounded-circle border border-4 border-dark bg-light shadow" />
                </div>
              </Col>
              {/* Information Section */}
-             <Col md={8} className="p-4 bg-light">
+             <Col md={8} className="p-4 article-card-body">
               <div>
                 {Object.entries(t("info", { returnObjects: true })).map(([key, value]) => (
                 <p key={key}>
