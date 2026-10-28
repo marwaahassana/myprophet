@@ -67,7 +67,7 @@ return(
                 ) : (
                 <p>{t("clckhdthbtn")}</p>
                 )}
-                <Button className="language-btn mt-4" onClick={getRandomHadith} className="mt-3">
+                <Button className="language-btn mt-4" onClick={getRandomHadith}>
                   {t("randomHadith")}
                 </Button>
               </Card.Body> 
