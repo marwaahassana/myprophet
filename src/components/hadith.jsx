@@ -25,22 +25,24 @@ const [loading, setLoading] = useState(false);
     document.body.dir = newLang === "ar" ? "rtl" : "ltr";
   }; 
    
-   const getRandomHadith = async () => {
+ const getRandomHadith = async () => {
     setLoading(true);
+
     try {
-      const res = await fetch(
-        "https://hadithapi.com/api/hadiths?apiKey=$2y$10$lVyOQVLKArlB38uo8hrbOu2we26LZ8QlHfM66d7S3eRBW52Mwnm"
-      );
-      const data = await res.json();
+      const response = await fetch("http://localhost:5000/api/hadith");
 
-      const list = data.hadiths.data;
-      const random = list[Math.floor(Math.random() * list.length)];
+      if (!response.ok) {
+        throw new Error("Failed to fetch hadith");
+      }
 
-      setHadith(random);
-    } catch (err) {
-      console.error(err);
+      const data = await response.json();
+
+      setHadith(data);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
 
