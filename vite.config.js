@@ -24,7 +24,7 @@ export default defineConfig({
         // New Life Event Pages
         israMiraj: resolve(__dirname, 'isra.html'),
         hijrah: resolve(__dirname, 'hijra.html'),
-        revelation: resolve(__dirname, 'iqraa.html.html'),
+        revelation: resolve(__dirname, 'iqraa.html'),
       },
     },
   },
