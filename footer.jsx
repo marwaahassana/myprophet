@@ -18,9 +18,9 @@ return(
   <footer className="site-footer mt-5">
     <Container className="text-center py-4">
       <Nav className="justify-content-center mb-3">
-        <Nav.Link href="resources.html">{t("resources")}</Nav.Link>
-        <Nav.Link href="sitemap.html">{t("sitemp")}</Nav.Link>
-        <Nav.Link href="about.html">{t("about")}</Nav.Link>
+        <Nav.Link href="/resources.html">{t("resources")}</Nav.Link>
+        <Nav.Link href="/sitemap.html">{t("sitemp")}</Nav.Link>
+        <Nav.Link href="/about.html">{t("about")}</Nav.Link>
       </Nav>
 
       {/* Footer Text */}

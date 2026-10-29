@@ -1,8 +1,8 @@
 import React from 'react';
 import i18n from 'i18next';
-import Mynavbar from './components/navbar';
-import Myfooter from './components/footer';
-import Myhadith from './components/hadith';
+import Mynavbar from './navbar';
+import Myfooter from './footer';
+import Myhadith from './hadith';
 import { Container, Row, Col, Card, Carousel} from 'react-bootstrap';
 import { useTranslation, initReactI18next } from 'react-i18next';
 import { useEffect } from 'react';

@@ -31,15 +31,15 @@ return(
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="index.html">{t("webname")}</Nav.Link>
+            <Nav.Link href="/index.html">{t("webname")}</Nav.Link>
             <NavDropdown title={t("chapterlife")} id="basic-nav-dropdown">
-              <NavDropdown.Item href="birth.html">{t("birth")}</NavDropdown.Item>
-              <NavDropdown.Item href="childhood.html">
+              <NavDropdown.Item href="/birth.html">{t("birth")}</NavDropdown.Item>
+              <NavDropdown.Item href="/childhood.html">
                 {t("childhood")}
               </NavDropdown.Item>
-              <NavDropdown.Item href="youth.html">{t("youth")}</NavDropdown.Item>
+              <NavDropdown.Item href="/youth.html">{t("youth")}</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="passing.html">
+              <NavDropdown.Item href="/passing.html">
                 {t("passing")}
               </NavDropdown.Item>
             </NavDropdown>

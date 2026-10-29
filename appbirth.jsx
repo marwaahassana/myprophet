@@ -1,7 +1,7 @@
 import React from 'react';
 import i18n from 'i18next';
-import Mynavbar from './components/navbar';
-import Myfooter from './components/footer';
+import Mynavbar from './navbar';
+import Myfooter from './footer';
 import { Container, Card } from 'react-bootstrap';
 import { useTranslation, initReactI18next } from 'react-i18next';
 import { useEffect } from 'react';

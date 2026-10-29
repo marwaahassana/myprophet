@@ -1,8 +1,8 @@
 import React from 'react';
 import i18n from 'i18next';
 import Table from 'react-bootstrap/Table';
-import Mynavbar from './components/navbar';
-import Myfooter from './components/footer';
+import Mynavbar from './navbar';
+import Myfooter from './footer';
 import { useTranslation, initReactI18next } from 'react-i18next';
 import { useEffect } from 'react';
 if (!i18n.isInitialized) {

@@ -3,8 +3,8 @@ import i18n from 'i18next';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Mynavbar from './components/navbar';
-import Myfooter from './components/footer';
+import Mynavbar from './navbar';
+import Myfooter from './footer';
 import { useTranslation, initReactI18next } from 'react-i18next';
 import { useEffect } from 'react';
 if (!i18n.isInitialized) {
